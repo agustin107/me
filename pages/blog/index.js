@@ -1,5 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getDocs, collection, getFirestore } from "firebase/firestore";
+import Head from "next/head";
 import { useEffect } from "react";
 import { BlogEntry } from "../../components/BlogEntry";
 import { Header } from "../../components/Header";
@@ -17,6 +18,9 @@ export default function Blog({ articles }) {
 
   return (
     <div className="container mx-auto">
+      <Head>
+        <title>Agustin's | Blog</title>
+      </Head>
       <Header />
       <div className="mt-5">
         <h2 className="font-space font-bold text-5xl">Blog</h2>
