@@ -1,19 +1,15 @@
-import Link from "next/link";
-import { Test } from "../components/Test";
+import { About } from "../components/About";
+import { Contact } from "../components/Contact";
+import { Header } from "../components/Header";
+import { Hero } from "../components/Hero";
 
 export default function Home() {
   return (
-    <div>
-      <h1 className="home">Home en Next</h1>
-      <ul style={{
-        height: "1200px"
-      }}>
-        <li><Link href="/about">About</Link></li>
-        <li><Link href="/contact">Contact</Link></li>
-        <li><Link href="/users">Users</Link></li>
-        <li><Link href="#test">Ir a test</Link></li>
-      </ul>
-      <Test color="blue" />
+    <div className="container mx-auto">
+      <Header />
+      <Hero />
+      <About />
+      <Contact />
     </div>
   )
 }
