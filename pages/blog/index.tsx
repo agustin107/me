@@ -6,7 +6,20 @@ import { BlogEntry } from "../../components/BlogEntry";
 import { Header } from "../../components/Header";
 import { clientCredentials } from "../../firebase";
 
-export default function Blog({ articles }) {
+export interface Article {
+  id: string;
+  title: string;
+  content: string;
+  create_date: {
+    seconds: number;
+  }
+}
+
+interface BlogProps {
+  articles: Article[];
+}
+
+export default function Blog({ articles }: BlogProps) {
   // state is loading
 
   useEffect(() => {
